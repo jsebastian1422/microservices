@@ -17,7 +17,7 @@ export default class Server {
         this.host = process.env.HOST || 'localhost'; 
 
         // Define conection database
-        this.dbConnect();
+        //this.dbConnect();
 
         // Define middlewares
         this.middlewares();
