@@ -22,7 +22,7 @@ const express_validation_1 = require("express-validation");
 class Server {
     constructor() {
         this.app = (0, express_1.default)();
-        this.port = process.env.PORT || '3010';
+        this.port = process.env.PORT || '3000';
         this.host = process.env.HOST || 'localhost';
         // Define conection database
         //this.dbConnect();
@@ -32,7 +32,7 @@ class Server {
         this.routes();
     }
     start(callback) {
-        this.app.listen(this.port, this.host, callback);
+        this.app.listen(this.port);
     }
     dbConnect() {
         return __awaiter(this, void 0, void 0, function* () {

@@ -13,7 +13,7 @@ export default class Server {
 
     constructor() {
         this.app = express();
-        this.port = process.env.PORT || '3010';
+        this.port = process.env.PORT || '3000';
         this.host = process.env.HOST || 'localhost'; 
 
         // Define conection database
@@ -27,7 +27,7 @@ export default class Server {
     }
 
     start( callback: Function) {
-        this.app.listen(this.port, this.host, callback);        
+        this.app.listen(this.port);        
     }
 
     async dbConnect() {
